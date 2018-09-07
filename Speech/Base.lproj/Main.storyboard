@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speech" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap button to start voice recognition!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNR-kj-S6y">
+                                <rect key="frame" x="46" y="73" width="283" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-vC-XHr">
+                                <rect key="frame" x="145" y="102" width="85" height="50"/>
+                                <color key="backgroundColor" red="0.88588594539999999" green="0.88588594539999999" blue="0.88588594539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="Q2y-u7-KVc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nN2-zB-SGn"/>
+                                </constraints>
+                                <state key="normal" title="Start/Stop"/>
+                                <connections>
+                                    <action selector="startStopButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9J1-l9-XES"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfC-2z-VjU">
+                                <rect key="frame" x="16" y="181" width="343" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="adm-5x-Z6W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say a color name!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzN-Gx-7NZ">
+                                <rect key="frame" x="119" y="469" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bE-79-C9D">
+                                <rect key="frame" x="67" y="498" width="240" height="70"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Xte-lk-Mf6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tfC-2z-VjU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0PD-e0-Z6t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tfC-2z-VjU" secondAttribute="trailing" constant="16" id="Akk-Zl-a4a"/>
+                            <constraint firstItem="tfC-2z-VjU" firstAttribute="top" secondItem="9QC-vC-XHr" secondAttribute="bottom" constant="29" id="CIK-YS-W6b"/>
+                            <constraint firstItem="1bE-79-C9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJt-fv-TyP"/>
+                            <constraint firstItem="9QC-vC-XHr" firstAttribute="top" secondItem="GNR-kj-S6y" secondAttribute="bottom" constant="8" id="OWf-gR-iBO"/>
+                            <constraint firstItem="1bE-79-C9D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="TMJ-SI-XwT"/>
+                            <constraint firstItem="dzN-Gx-7NZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5M-aG-sRs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1bE-79-C9D" secondAttribute="trailing" constant="68" id="bFU-Iv-i8c"/>
+                            <constraint firstItem="9QC-vC-XHr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkR-ZB-kuq"/>
+                            <constraint firstItem="1bE-79-C9D" firstAttribute="top" secondItem="dzN-Gx-7NZ" secondAttribute="bottom" constant="8" id="k5o-5l-elw"/>
+                            <constraint firstItem="dzN-Gx-7NZ" firstAttribute="top" secondItem="tfC-2z-VjU" secondAttribute="bottom" constant="8" id="n8B-Ow-ncf"/>
+                            <constraint firstItem="GNR-kj-S6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wrY-aJ-7gs"/>
+                            <constraint firstItem="GNR-kj-S6y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="yde-3v-PNC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="1bE-79-C9D" id="urF-dc-GmD"/>
+                        <outlet property="recognizedTextLabel" destination="tfC-2z-VjU" id="xSe-h0-wKW"/>
+                        <outlet property="startStopButton" destination="9QC-vC-XHr" id="5tb-Sc-S1A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
