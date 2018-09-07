@@ -45,8 +45,21 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate{
             return
         }
         recognitionTask = speechRecognizer?.recognitionTask(with: request) { result, error in
+            
             if let result = result {
-                self.recognizedTextLabel.text = result.bestTranscription.formattedString
+                self.startStopButton.isEnabled = false
+                let recognizedText = result.bestTranscription.formattedString
+                self.recognizedTextLabel.text = recognizedText
+                let words = recognizedText.split(separator: " ")
+                if  result.isFinal,
+                    let lastWord = words.last,
+                    String(lastWord) == "gray" {
+                    self.audioEngine.stop()
+                    self.request.endAudio()
+                    self.audioEngine.inputNode.removeTap(onBus: 0)
+                    self.startStopButton.isEnabled = true
+                    return
+                }
             } else if let error = error {
                 print(error.localizedDescription)
             }
